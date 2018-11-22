@@ -71,3 +71,35 @@ ul li a{
     border:none;
     text-transform: uppercase;
 }
+
+.con-red{
+    width:80%;
+    margin: 0 auto;
+    color: #fff;
+    padding: 10%;
+    padding-top:20%;
+    }
+
+#del{
+    margin-top: 10%;
+    height: 40px;
+    width: 8%;
+    border-radius: 5%;
+    background:red;
+    color: white;
+    border:none;
+    text-transform: uppercase;
+
+}
+
+#tag{
+    margin-top: 10%;
+    height: 40px;
+    width: 8%;
+    border-radius: 5%;
+    background:rgb(7, 211, 75);
+    color: white;
+    border:none;
+    text-transform: uppercase;
+
+}

@@ -81,6 +81,8 @@ form button {
     background:rgb(0, 128, 58);
     border: none;
     border-radius: 5%;
+    color: white;
+    
 }
 
 form button a{
@@ -89,6 +91,7 @@ form button a{
     color: white;
    
 }
+
 
 
 .form button:hover,.form button:active{
@@ -109,4 +112,12 @@ form button a{
 
 .wel{
     color: floralwhite;
+}
+
+#text-inp{
+    height:60px;
+}
+  
+#loc{
+    background-color:lightskyblue;
 }

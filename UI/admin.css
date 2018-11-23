@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300i,400i,900i');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: #424C55;
+  font-style: italic;
+  font-family: 'Roboto', sans-serif;
+}
+
+nav{
+    width: 100%;
+    background:rgb(109, 108, 108);
+    border-radius: 1%;
+    margin-bottom: 3%;
+    position: fixed;
+    top: 0;
+}
+
+
+
+ul{
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 20px;
+}
+
+ul li:hover{
+    background: chartreuse;
+}
+
+ul li a{
+    color: #fff;
+    text-decoration: none;
+
+}
+#brand{
+    float: right;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.container{
+    width: 100%;
+    margin-top: 5%;
+}
+
+img{
+    width: 100px;
+    height: 16%;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.profile-card{
+    width: 70%;
+    margin: 0  auto;
+    text-align: center;
+    background: cadetblue;
+    padding-top:10px;
+    border-radius: 5px;
+    margin-bottom: 3%;
+}
+
+table.blueTable {
+    border: 1px solid #1C6EA4;
+    background-color: #EEEEEE;
+    width: 70%;
+    text-align: left;
+    border-collapse: collapse;
+    margin: 0 auto;
+    margin-bottom: 3%;
+  }
+  table.blueTable td, table.blueTable th {
+    border: 1px solid #AAAAAA;
+    padding: 3px 2px;
+  }
+  table.blueTable tbody td {
+    font-size: 13px;
+  }
+  table.blueTable tr:nth-child(even) {
+    background: #D0E4F5;
+  }
+  table.blueTable thead {
+    background: #1C6EA4;
+    background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+    background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+    background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+    border-bottom: 2px solid #444444;
+  }
+  table.blueTable thead th {
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-left: 2px solid #D0E4F5;
+  }
+  table.blueTable thead th:first-child {
+    border-left: none;
+  }
+  
+  h3{
+      color: white;
+      text-align: center;
+  }

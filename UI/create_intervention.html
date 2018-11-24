@@ -28,12 +28,32 @@
                 <input type="text" placeholder="Date">
                 <input id="text-inp" type="text" placeholder="Description">
                 <input type="file" name="myfile" placeholder="Description"/>
-                <button id="loc">Add Location</button>
-                <button> <a href="">Submit</a></button>
+                <div id="cordinates"></div>
             </form>
-            <div id="map">
-            </div>
+           
+            <button class="create" onclick="getLocation()">Add Location</button>
+            <button class="create"> <a href="">Submit</a></button>
         </div>
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>   
-</body>
+
+      <script>
+          
+             let x = document.getElementById("cordinates");
+             function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                     } 
+                     else {
+                        x.innerHTML = "Geolocation is not supported by this browser.";
+                        }
+                }
+            function showPosition(position) {
+                    x.innerHTML = "Latitude: " + position.coords.latitude + 
+                    "<br>Longitude: " + position.coords.longitude; 
+                    }
+        </script>
+
+    
+        </body>
+      
+
 </html>

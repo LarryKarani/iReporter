@@ -17,17 +17,20 @@
     </nav>
     <div class="login-page">
         <div class="form">
-        <form class="login-form" action="">
+        <form class="login-form" id="login" action='' method="POST">
                 <h3 class="wel">Welcome to iReporter</h3>
                 <h3 class="message" id="log">Please Login</h3>
-                <input type="text" placeholder="username" required="required">
-                <input type="text" placeholder="password" required="required">
-                <button><a href="user_profile.html">login</a></button>
+                <input name= "username" type="text" placeholder="username" required="required" id="username">
+                <input name = "password" type="text" placeholder="password" required="required" id="password">
+                <small id="errors"></small><br>
+                <button type="submit" onclick="login()">Log In</button>
+               
                 <p class="message">Dont have an account <a href="sign_up.html">Register</a></p>
         </form>
     </div>
     </div>
 
-    
+<script src="static/login.js"></script>
 </body>
 </html>
+

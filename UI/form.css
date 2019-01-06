@@ -156,3 +156,8 @@ form button a{
     border-radius: 3%;
     height: 40px;
 }
+
+small {
+color:red;
+font-size:16px;
+}

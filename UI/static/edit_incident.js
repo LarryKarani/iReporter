@@ -67,9 +67,7 @@ function editComment() {
                 error_container.style.color = "green"
                 error_container.innerHTML = data.message
                 hide_message()
-                window.setTimeout(function () {
-                    window.location.replace('user_profile.html')
-                }, 3000)
+                
                 
             }
         }
@@ -90,4 +88,63 @@ function editComment() {
     })
     .catch((e)=> console.log(e))
 
+}
+// update location
+
+function hide_location_message() {
+    let error_container = document.getElementById('errors')
+    window.setTimeout(function () {
+        if(error_container){
+            error_container.innerHTML = ""
+        }
+    }, 2000)
+}
+
+function editLocation() {
+    event.preventDefault();
+
+    let incident_id = localStorage.getItem('incident_id')
+    let location = document.getElementById('location').value;
+
+    fetch(`${url}${incident_id}/location`, {
+        method: 'PATCH',
+        headers: {
+            "Content-type": "application/json",
+            "Accept": "application/json",
+            "Authorization": jwt_token
+        },
+        body: JSON.stringify({
+            location: location
+        })
+    })
+    .then((res)=> res.json())
+    //.then((data)=> console.log(data))
+    .then((data) => {
+        if (data.status == 200){
+            let error_container = document.getElementById('errors')
+            if(error_container) {
+                error_container.style.color = "green"
+                error_container.innerHTML = data.message
+                hide_message()
+                
+                
+            }
+        }
+        else if (data.msg == "Token has expired"){
+            let error_container = document.getElementById('errors')
+            if (error_container){
+                alert('Your session has expired, press ok to login')
+                login_redirect()
+            }
+        }
+
+        else {
+            let error_container = document.getElementById('errors')
+            if (error_container) {
+                error_container.innerHTML = data.message
+            }
+        }
+        })
+        .catch((e) => console.log(e))
+    
 }

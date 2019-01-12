@@ -354,3 +354,8 @@ tr:nth-child(even),table.list thead>tr {
   
 
 }
+
+#message{
+  margin:0 auto;
+  text-align: center;
+}

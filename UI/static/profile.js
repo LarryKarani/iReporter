@@ -1,7 +1,8 @@
-let url = "https://ireporter-version2.herokuapp.com/api/v2/interventions/user";
+let url = "https://ireporter-version2.herokuapp.com/api/v2/interventions/";
 let token = localStorage.getItem('token')
 let jwt_token = "Bearer " + token
 
+let user ='user'
 
 function createNode(element){
     return document.createElement(element);
@@ -30,7 +31,7 @@ function login_redirect(){
 }
 window.onload = function incidents_report(){
 
-fetch(url,{
+fetch(`${url}${user}`,{
     method: 'GET',
     headers: {
 
@@ -70,7 +71,7 @@ fetch(url,{
                 cell5.innerHTML = incident.location
                 cell5 = newRow.insertCell(6)
                                   
-                cell5.innerHTML = '<button id="edit" onclick="editIncident()">Edit</button><button id="delete" onclick="delete()">Delete</button>'
+                cell5.innerHTML = '<button id="edit" onclick="editIncident()">Edit</button><button id="delete" onclick="deleteIncident()">Delete</button>'
                                    
                 if(incident.status == 'Draft'){
                     draft++;

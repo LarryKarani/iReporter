@@ -1,4 +1,4 @@
-let url = 'https://ireporter-version2.herokuapp.com/api/v2/interventions/'
+var url = 'https://ireporter-version2.herokuapp.com/api/v2/interventions/'
 const token = localStorage.getItem('token')
 const jwt_token = "Bearer " + token
 // sets the variables to facilitate edit

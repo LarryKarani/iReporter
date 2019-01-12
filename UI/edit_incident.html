@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit incident</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <script src="static/edit_incident.js"></script>
+</head>
+<body>
+        <nav>
+                <ul>
+                   <li> <a href="index.html">Home</a> </li>
+                    <li><a href="user_profile.html">profile</a></li>
+                    <li> <a href="all_redflags.html">red-flags</a> </li>
+                    <li> <a href="">interventions</a> </li>
+                    <li id="brand"> <i class="fas fa-eye"></i>iReporter</li>
+                </ul>
+            </nav>
+
+    <div class="login-page">
+        <div class ="form">
+            <form id="incidentForm" action="" class="register-form" method="POST">
+    
+                <h3 class="wel">All red-flags reports are confidential</h3>
+                <h3 class="message" id="log">Please fill  in the details below to edit</h3>
+                <select name="incident" id="incident">
+                       <option id='incident_type' value="">Select incident type</option>
+                        <option value="Red-flag">Red-flag</option>
+                        <option value="Intervention">Intervention</option>
+                        <br>
+                </select>
+                <br><br>
+                
+                <input id="text-inp" type="text" placeholder="Comment">
+                <input type="file" name="myfile" placeholder="Description"/>
+                <div id="cordinates"></div>
+            </form>
+            <button class="create" onclick="getLocation()">Add Location</button>
+            <button class="create" onclick="editComment()"> Submit </button> <br><br>
+
+            <div id="errors"></div>
+        </div>
+
+
+
+        <script>
+          
+                let x = document.getElementById("cordinates");
+                function getLocation() {
+                   if (navigator.geolocation) {
+                       navigator.geolocation.getCurrentPosition(showPosition);
+                        } 
+                        else {
+                           x.innerHTML = "Geolocation is not supported by this browser.";
+                           }
+                   }
+               function showPosition(position) {
+                       x.innerHTML = position.coords.latitude + "," + position.coords.longitude; 
+                       }
+           </script>
+
+           
+</body>
+</html>

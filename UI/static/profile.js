@@ -1,3 +1,8 @@
+let url = "https://ireporter-version2.herokuapp.com/api/v2/interventions/user";
+let token = localStorage.getItem('token')
+let jwt_token = "Bearer " + token
+
+
 function createNode(element){
     return document.createElement(element);
 }
@@ -8,9 +13,6 @@ function append(parent, el){
 
 let table_data = document.getElementById("incident_stats").getElementsByTagName('tbody')[0];
 
-let url = "https://ireporter-version2.herokuapp.com/api/v2/interventions/user";
-let token = localStorage.getItem('token')
-let jwt_token = "Bearer " + token
 
 // check if the token exists
 if(token == null){
@@ -55,15 +57,20 @@ fetch(url,{
                 
                 let newRow = table_data.insertRow(table_data.length);
                 cell1 = newRow.insertCell(0)
+                cell1.innerHTML = incident.id
+                cell1 = newRow.insertCell(1)
                 cell1.innerHTML = incident.createdon
-                cell2 = newRow.insertCell(1)
+                cell2 = newRow.insertCell(2)
                 cell2.innerHTML = incident.comment
-                cell3 = newRow.insertCell(2)
+                cell3 = newRow.insertCell(3)
                 cell3.innerHTML = incident.type
-                cell4= newRow.insertCell(3)
+                cell4= newRow.insertCell(4)
                 cell4.innerHTML = incident.status
-                cell5 = newRow.insertCell(4)
-                cell5.innerHTML = '<a href="#">Edit</a> <a href="#">Delete</a>'
+                cell5 = newRow.insertCell(5)
+                cell5.innerHTML = incident.location
+                cell5 = newRow.insertCell(6)
+                                  
+                cell5.innerHTML = '<button id="edit" onclick="editIncident()">Edit</button><button id="delete" onclick="delete()">Delete</button>'
                                    
                 if(incident.status == 'Draft'){
                     draft++;
@@ -92,4 +99,19 @@ fetch(url,{
             })
         }
       } )
+    }
+
+    function editIncident(){
+        let table_data = document.getElementById('incident_stats')
+    
+        for (var i = 0; i < table_data.rows.length; i++){
+            table_data.rows[i].onclick = function (){
+                localStorage.setItem('incident_id', this.cells[0].innerHTML)
+                localStorage.setItem('incident_type', this.cells[1].innerHTML)
+                localStorage.setItem('comment', this.cells[2].innerHTML)
+    
+                window.location.href = "edit_incident.html"
+            }
+        }
+        
     }

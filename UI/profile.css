@@ -328,3 +328,29 @@ td, th {
 tr:nth-child(even),table.list thead>tr {
   background-color: #dddddd;
 }
+
+#edit {
+  margin-right: 4%;
+  height: 30px;
+  background:rgb(10, 87, 252);
+  border-radius: 10%;
+  border: none;
+  color: white;
+  padding-left: 4%;
+  padding-right: 4%;
+  
+}
+
+#delete {
+  height: 30px;
+  background:red;
+  border: none;
+  border-radius: 10%;
+  color: white;
+  padding-left: 2%;
+  padding-right: 2%;
+  
+ 
+  
+
+}

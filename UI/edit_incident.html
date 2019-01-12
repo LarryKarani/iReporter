@@ -34,32 +34,14 @@
                 <br><br>
                 
                 <input id="text-inp" type="text" placeholder="Comment">
-                <input type="file" name="myfile" placeholder="Description"/>
-                <div id="cordinates"></div>
+                <input id="location" type="text" placeholder="Location">
+                
             </form>
-            <button class="create" onclick="getLocation()">Add Location</button>
-            <button class="create" onclick="editComment()"> Submit </button> <br><br>
+            <button class="create" onclick="editLocation()">Submit new Location</button>
+            <button class="create" onclick="editComment()"> Submit new comment</button> <br><br>
 
             <div id="errors"></div>
         </div>
-
-
-
-        <script>
-          
-                let x = document.getElementById("cordinates");
-                function getLocation() {
-                   if (navigator.geolocation) {
-                       navigator.geolocation.getCurrentPosition(showPosition);
-                        } 
-                        else {
-                           x.innerHTML = "Geolocation is not supported by this browser.";
-                           }
-                   }
-               function showPosition(position) {
-                       x.innerHTML = position.coords.latitude + "," + position.coords.longitude; 
-                       }
-           </script>
 
            
 </body>

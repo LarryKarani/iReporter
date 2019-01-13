@@ -1,57 +1,48 @@
-html lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>questions</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-    <link rel="stylesheet" href="list.css">
-
+    <link rel="stylesheet" href="profile.css">
 </head>
 
 <body>
 <!--nav-->
 <nav>
     <ul>
-        <li> <a href="home.html">Home</a> </li>
+        <li> <a href="index.html">Home</a> </li>
         <li><a href="user_profile.html">Profile</a></li>
-        <li> <a href="all_redflags.html">Red-flags</a> </li>
-        <li> <a href="create_red.html">Create-redflag</a> </li>
-        <li> <a href="create_intervention.html">Create intervention</a> </li>
+        <li> <a href="#">Red-flags</a> </li>
+        <li> <a href="create_red.html">Create redflag</a> </li>
         <li id="brand"> <i class="fas fa-eye"></i>iReporter</li>
     </ul>
 </nav>
-<div class="container">
-        <div id="title">
-            <h2>interventions</h2>
-        </div>
-        <div class="red-flag">
-            <h3>
-                <a href="#">Trafic police taking bribe along thika super highway.
-                    They are hidding the  money  under bush 
-                </a>
-            </h3>
-            <button id="tag">Details</button>
+<table>
+    <tr>
+        <td>
+            <table class="list" id="incident_stats">
+                <thead>
+                    <tr>
+                        <th>Incident_id</th>
+                        <th>Created on</th>
+                        <th>Comment</th>
+                        <th>Incident type</th>
+                        <th>Status</th>
+                        <th>Location</th>
+                        <th>Action</th>
 
-        </div>
+                        
+                    </tr>
+                </thead>
+                <tbody>
 
-        <div class="red-flag">
-                <h3>
-                    <a href="#">Kindaruma bridge needs to be fixed,
-                         To enable users to move easyly from kiandaruma market to their residences</a>
-                </h3>
-                <button id="tag">Details</button>
-    
-            </div>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+</table>
 
-            <div class="red-flag">
-                    <h3>
-                        <a href="#">
-                            Tahjmal has been built on reparian land it needs to be pulled down as it hinders navigation of  rivers resulting to floods
-                            
-                             </a>
-                    </h3>
-                    <button id="tag">Details</button>
-                </div>
-    </div>
+<script src="static/interventions.js"></script>
 </body>
 </html>

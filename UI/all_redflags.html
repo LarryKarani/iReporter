@@ -4,8 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>questions</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-    <link rel="stylesheet" href="list.css">
-
+    <link rel="stylesheet" href="profile.css">
 </head>
 
 <body>
@@ -14,51 +13,36 @@
     <ul>
         <li> <a href="index.html">Home</a> </li>
         <li><a href="profile.html">Profile</a></li>
-        <li> <a href="#">Red-flags</a> </li>
-        <li> <a href="create_red.html">Create-redflag</a> </li>
-        <li> <a href="create_interventions.html">Create intervention</a> </li>
+        <li> <a href="interventions.html">Interventions</a> </li>
+        <li> <a href="create_red.html">Create redflag</a> </li>
         <li id="brand"> <i class="fas fa-eye"></i>iReporter</li>
     </ul>
 </nav>
-<div class="container">
-        <div id="title">
-            <h2>red flags</h2>
-        </div>
-        <div class="red-flag">
-            <h3>
-                <a href="#">Trafic police taking 
-                        iReporter enables
-                        any/every citizen to bring any form 
-                        of corruption to the notice of appropriate authorities 
-                        bribes along thika super highway</a>
-            </h3>
-            <button id="tag"> <a href="edit_delete_redflag.html"> Details</a></button>
+<table>
+    <tr>
+        <td>
+            <table class="list" id="incident_stats">
+                <thead>
+                    <tr>
+                        <th>Incident_id</th>
+                        <th>Created on</th>
+                        <th>Comment</th>
+                        <th>Incident type</th>
+                        <th>Status</th>
+                        <th>Location</th>
+                        <th>Action</th>
 
-        </div>
+                        
+                    </tr>
+                </thead>
+                <tbody>
 
-        <div class="red-flag">
-                <h3>
-                    <a href="#">rafic police taking 
-                            iReporter enables
-                            any/every citizen to bring any form 
-                            of corruption to the notice of appropriate authorities 
-                            bribes along thika super highway</a>
-                </h3>
-                <button id="tag"> <a href="edit_delete_redflag.html"> Details</a></button>
-    
-            </div>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+</table>
 
-            <div class="red-flag">
-                    <h3>
-                        <a href="#">Trafic police rafic police taking 
-                                iReporter enables
-                                any/every citizen to bring any form 
-                                of corruption to the notice of appropriate authorities 
-                                bribes along thika super highway
-                            taking bribes along thika super highway</a>
-                    </h3>
-                    <button id="tag"> <a href="edit_delete_redflag.html"></a> Details</button>
-                </div>
-    </div>
+<script src="static/red_flags.js"></script>
 </body>
 </html>

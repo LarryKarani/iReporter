@@ -64,7 +64,7 @@ fetch(url,{
                 cell5 = newRow.insertCell(5)
                 cell5.innerHTML = incident.location
                 cell5 = newRow.insertCell(6)        
-                cell5.innerHTML = '<button id="edit" onclick="view()">View</button>'
+                cell5.innerHTML = '<button id="edit" onclick=" ViewIncident()">View</button>'
 
                 }
                                    
@@ -73,3 +73,14 @@ fetch(url,{
        })
        .catch((e)=> console.log(e))
     }
+
+    function ViewIncident(){
+        let table_data = document.getElementById('incident_stats')
+    
+        for (var i = 0; i < table_data.rows.length; i++){
+            table_data.rows[i].onclick = function (){
+                localStorage.setItem('incident_id', this.cells[0].innerHTML)
+                window.location.href = "view.html" 
+            }
+        }      
+     }

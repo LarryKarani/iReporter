@@ -77,3 +77,5 @@ function create_incident(){
     })
     .catch((e) => console.log(e))
 }
+
+module.exports = create_incident

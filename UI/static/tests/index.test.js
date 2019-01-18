@@ -19,7 +19,7 @@ describe('H1 Text', () => {
             userAgent: ''
         });
 
-        await page.goto('http://127.0.0.1:5500/index.html');
+        await page.goto('https://larrythegeek.github.io/iReporter/UI/index.html');
         await page.waitForSelector('.load');
 
         const html = await page.$eval('.load', e => e.innerHTML);

@@ -24,6 +24,6 @@ describe('H1 Text', () => {
 
         const html = await page.$eval('.load', e => e.innerHTML);
         expect(html).toBe("Welcome to iReporter");
-        browser.close();
-    }, 16000);
+        await browser.close();
+    }, 160000);
 });

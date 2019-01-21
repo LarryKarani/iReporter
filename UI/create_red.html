@@ -26,7 +26,6 @@
                 <h3 class="wel">All red-flags reports are confidential</h3>
                 <h3 class="message" id="log">Please fill  in the details below</h3>
                 <select name="incident" id="incident">
-                       <option>Select incident type</option>
                         <option value="Red-flag">Red-flag</option>
                         <option value="Intervention">Intervention</option>
                         <br>
@@ -37,8 +36,8 @@
                 <input type="file" name="myfile" placeholder="Description"/>
                 <div id="cordinates"></div>
             </form>
-            <button class="create" onclick="getLocation()">Add Location</button>
-            <button class="create" onclick="create_incident()"> Submit </button> <br><br>
+            <button id="loc" class="create" onclick="getLocation()">Add Location</button>
+            <button type="submit" class="create" onclick="create_incident()"> Submit </button> <br><br>
 
             <div id="errors"></div>
         </div>

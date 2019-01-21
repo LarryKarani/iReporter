@@ -17,10 +17,8 @@ const person = {
 describe('signup form', async () => {
     test('can signup', async () =>{
         let browser = await puppeteer.launch({
-            headless: false,
-            args:['--no-sandbox'],
-            devtools: true,
-            slowMo: 250
+            headless: true,
+            args:['--no-sandbox']
         });
 
         let page = await browser.newPage();

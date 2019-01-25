@@ -73,12 +73,9 @@ ul li a{
   }
   
   #card img {
-    width: 150px;
+    width: 250px;
     border-radius: 5px;
     margin-right: 20px;
-    -webkit-filter: sepia(1);
-    -moz-filter: sepia(1);
-    filter: sepia(1);
   }
   
   #card h2 {

@@ -21,7 +21,7 @@
 
     <div class="login-page">
         <div class ="form">
-            <form id="incidentForm" action="" class="register-form" method="POST">
+            <form id="incidentForm" action="" class="register-form" method="POST" enctype="multipart/form-data" >
     
                 <h3 class="wel">All red-flags reports are confidential</h3>
                 <h3 class="message" id="log">Please fill  in the details below</h3>
@@ -33,7 +33,7 @@
                 <br><br>
                 
                 <input id="text-inp" type="text" placeholder="Comment">
-                <input type="file" name="myfile" placeholder="Description"/>
+                <input id="image" type="file" name="myfile" accept="image/png, image/jpg, image/jpeg"/>
                 <div id="cordinates"></div>
             </form>
             <button id="loc" class="create" onclick="getLocation()">Add Location</button>

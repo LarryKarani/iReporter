@@ -19,13 +19,14 @@ window.onload = ()=>{
         })
           .then((res)=> res.json())
           .then((data) =>{
-            console.log(data)
+            console.log(data.data[0].image)
             if ( data.msg == "Token has expired"){
                 login_redirect()
             }
             else if(data.status == 200){
                 console.log( document.getElementById('incident').innerHTML)
-
+                
+                document.getElementById('file').src =  data.data[0].image
                 document.getElementById('incident').innerHTML = data.data[0].type
                 document.getElementById('comment').innerHTML= data.data[0].comment
                 document.getElementById('date').innerHTML= data.data[0].createdon

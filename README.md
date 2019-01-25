@@ -17,7 +17,7 @@ Ireporter Platform implements the following  functionality
 __Instalation__
 
 - Clone the repository
-git clone https://github.com/kirega/iReporter-fetchAPI.git
+git clone https://github.com/larryTheGeek/iReporter.git
 
 - Open the index.html page on your browser preferably chrome
 

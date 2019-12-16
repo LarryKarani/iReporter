@@ -1,8 +1,8 @@
 const url = "https://ireporter-version2.herokuapp.com/api/v2/auth/login"
 function login() {
     event.preventDefault();
-    let Form = document.getElementById('login');
-    let loginFormData = new FormData('LoginForm');
+    // let Form = document.getElementById('login');
+    // let loginFormData = new FormData('LoginForm');
     
     let username = document.getElementById('username').value;
     let password = document.getElementById('password').value;

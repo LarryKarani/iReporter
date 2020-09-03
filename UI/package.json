@@ -13,6 +13,6 @@
     "jest": "^23.6.0",
     "jest-cli": "^23.6.0",
     "jest-fetch-mock": "^2.1.0",
-    "puppeteer": "^1.11.0"
+    "puppeteer": "^1.13.0"
   }
 }
